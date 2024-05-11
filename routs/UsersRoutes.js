@@ -2,30 +2,30 @@ import express from "express";
 import UserModel from "../models/users.js";
 const router = express.Router();
 
-router.get("/users", async (request, response) => {
+router.get("/user", async (request, response) => {
     try {
-        const users = await UserModel.find({});
-        response.send(users);
+        const user = await UserModel.find({});
+        response.send(user);
     } catch (error) {
         response.status(500).send({ error });
     }
 });
 
-router.post("/users", async (request, response) => {
-    const users = new UserModel(request.body);
+router.post("/user", async (request, response) => {
+    const user = new UserModel(request.body);
 
     try {
-        await product.save();
-        response.send(users);
+        await user.save();
+        response.send(user);
     } catch (error) {
         response.status(500).send(error);
     }
 });
 
-router.get("/users/:id", async (request, response) => {
+router.get("/user/:id", async (request, response) => {
     try {
-        const users = await UserModel.findOne({ _id: request.params.id });
-        response.send(users);
+        const user = await UserModel.findOne({ _id: request.params.id });
+        response.send(user);
     } catch (error) {
         response.status(500).send({ error });
     }

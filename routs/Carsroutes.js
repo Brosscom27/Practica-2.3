@@ -2,30 +2,30 @@ import express from "express";
 import CarModel from "../models/cars.js";
 const router = express.Router();
 
-router.get("/cars", async (request, response) => {
+router.get("/car", async (request, response) => {
     try {
-        const cars = await CarModel.find({});
-        response.send(cars);
+        const car = await CarModel.find({});
+        response.send(car);
     } catch (error) {
         response.status(500).send({ error });
     }
 });
 
-router.post("/cars", async (request, response) => {
-    const product = new CarModel(request.body);
+router.post("/car", async (request, response) => {
+    const car = new CarModel(request.body);
 
     try {
-        await product.save();
-        response.send(cars);
+        await car.save();
+        response.send(car);
     } catch (error) {
         response.status(500).send(error);
     }
 });
 
-router.get("/cars/:id", async (request, response) => {
+router.get("/car/:id", async (request, response) => {
     try {
-        const cars = await CarModel.findOne({ _id: request.params.id });
-        response.send(cars);
+        const car = await CarModel.findOne({ _id: request.params.id });
+        response.send(car);
     } catch (error) {
         response.status(500).send({ error });
     }

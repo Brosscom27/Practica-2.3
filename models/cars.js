@@ -13,5 +13,5 @@ const CarSchema = new mongoose.Schema({
     version: { type: String }
 });
 
-const CarModel = mongoose.model("Cars", CarSchema);
+const CarModel = mongoose.model("cars", CarSchema);
 export default CarModel;
