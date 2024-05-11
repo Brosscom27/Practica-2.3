@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const UsersShema = new mongoose.Schema({
+const UserShema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -10,9 +10,9 @@ const UsersShema = new mongoose.Schema({
         required: true,
     },
     age: {
-        type: Int
+        type: Number
     }
 });
 
-const UserModel = mongoose.Model("Users", UsersShema);
+const UserModel = mongoose.model("Users", UserShema);
 export default UserModel;

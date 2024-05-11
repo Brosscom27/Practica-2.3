@@ -1,3 +1,4 @@
+import express from "express";
 import UserModel from "../models/users.js";
 const router = express.Router();
 
@@ -30,4 +31,4 @@ router.get("/users/:id", async (request, response) => {
     }
 });
 
-export default routerusers;
+export default router;

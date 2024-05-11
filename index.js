@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import DB from "./config/db.js";
+import UsersRoutes from "./routs/UsersRoutes.js"
+import Carsroutes from "./routs/Carsroutes.js"
 
 dotenv.config();
 

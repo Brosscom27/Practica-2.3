@@ -1,3 +1,4 @@
+import express from "express";
 import CarModel from "../models/cars.js";
 const router = express.Router();
 
@@ -30,4 +31,4 @@ router.get("/cars/:id", async (request, response) => {
     }
 });
 
-export default routercars;
+export default router;
